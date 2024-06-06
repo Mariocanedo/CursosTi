@@ -41,10 +41,10 @@ class CursosAdapter : RecyclerView.Adapter<CursosAdapter.CardViewHolder>() {
 
         fun bin(listaCuros: ListaCursosLocal) {
 
-            Glide.with(binding.Imagencard).load(listaCuros.image).centerCrop().into(binding.Imagencard)
-            binding.tvtitle.text = listaCuros.title
-            binding.tvdescripcion.text = listaCuros.description
-            binding.tvweeks.text = listaCuros.weeks.toString()
+            Glide.with(binding.ivLogo).load(listaCuros.image).centerCrop().into(binding.ivLogo)
+            binding.tvname.text = listaCuros.title
+            binding.tvdescription.text = listaCuros.previewDescription
+            binding.tvduration.text = listaCuros.weeks.toString()
             binding.tvstart.text = listaCuros.start
             itemView.setOnClickListener(this)
         }

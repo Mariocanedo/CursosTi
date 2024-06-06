@@ -5,13 +5,14 @@ import com.aumentarte.cursosti.model.local.entidades.ListaCursosLocal
 import com.aumentarte.cursosti.model.remoto.internet.DetalleCursosInternet
 import com.aumentarte.cursosti.model.remoto.internet.ListaCursosInternet
 
+
 fun fromInterLista (lista: List<ListaCursosInternet>): List<ListaCursosLocal> {
     return lista.map {
         ListaCursosLocal(
 
             id = it.id,
             title = it.title,
-            description = it.description,
+            previewDescription = it.previewDescription,
             image = it.image,
             weeks = it.weeks,
             start = it.start
@@ -24,7 +25,7 @@ fun fromInterDetalle(detail: DetalleCursosInternet): DetalleCursosLocal {
     return DetalleCursosLocal(
         id = detail.id,
         title = detail.title,
-        description = detail.description,
+        previewDescription = detail.previewDescription,
         image = detail.image,
         weeks = detail.weeks,
         start = detail.start,
@@ -33,4 +34,5 @@ fun fromInterDetalle(detail: DetalleCursosInternet): DetalleCursosLocal {
         scholarshipsAvailabl = detail.scholarshipsAvailabl,
         modality = detail.modality
     )
+
 }

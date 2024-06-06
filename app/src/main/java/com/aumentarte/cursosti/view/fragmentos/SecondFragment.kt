@@ -50,11 +50,10 @@ class SecondFragment : Fragment() {
         viewModel.getDetalleCursos().observe(viewLifecycleOwner, Observer {
 
             var curso = it.title
-            var descrip = it.description
-
+            var descrip = it.previewDescription
             Glide.with(binding.ivLogo).load(it.image).into(binding.ivLogo)
             binding.tvTitle.text = "Nombre: ${it.title}"
-            binding.tvDescription.text = "Descripcion: ${it.description}"
+            binding.tvDescription.text = "Descripcion: ${it.previewDescription}"
             binding.tvMinimumSkill.text = "Conocimiento minimo : ${it.minimumSkill}"
             binding.tvModality.text = "Modalidad : ${it.modality}"
             binding.tvTuition.text = "Valor del curso : ${it.tuition}"

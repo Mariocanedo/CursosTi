@@ -6,8 +6,8 @@ data class ListaCursosInternet(
 
     val id : String,
     val title: String,
-    @SerializedName("previewDescription")
-    val description: String,
+ // @SerializedName("previewDescription")
+    val previewDescription: String,
     val image: String,
     val weeks: Int,
     val start : String,

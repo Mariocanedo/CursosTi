@@ -19,10 +19,10 @@ import com.aumentarte.cursosti.viewModel.CursosViewModel
 class FirstFragment : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
-    private val binding get() = _binding!!
+
     private val viewModel: CursosViewModel by activityViewModels()
 
-
+    private val binding get() = _binding!!
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
